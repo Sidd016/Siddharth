@@ -1,0 +1,324 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine? ❤️</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: pink;
+        }
+
+        #popup {
+            width: 300px;
+            background: white;
+            padding: 20px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            display: block;
+        }
+
+        h2 {
+            color: red;
+        }
+
+        #buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #yes {
+            background-color: green;
+            color: white;
+        }
+
+        #no {
+            background-color: red;
+            color: white;
+            position: absolute;
+        }
+
+        #message {
+            display: none;
+            font-size: 20px;
+            color: darkred;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="popup">
+        <h2>Will you be my Valentine? 💖</h2>
+        <div id="buttons">
+            <button id="yes" onclick="yesClicked()">Yes</button>
+            <button id="no" onmouseover="moveNo()">No</button>
+        </div>
+    </div>
+
+    <p id="message">Yay! I love you! ❤️😘</p>
+
+    <script>
+        function yesClicked() {
+            document.getElementById("popup").style.display = "none";
+            document.getElementById("message").style.display = "block";
+        }
+
+        function moveNo() {
+            var x = Math.random() * (window.innerWidth - 100);
+            var y = Math.random() * (window.innerHeight - 100);
+            document.getElementById("no").style.left = x + "px";
+            document.getElementById("no").style.top = y + "px";
+        }
+    </script>
+
+</body>
+</html>
+-->
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine? ❤️</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: pink;
+        }
+
+        #popup {
+            width: 350px;
+            background: white;
+            padding: 20px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            display: block;
+        }
+
+        h2 {
+            color: red;
+        }
+
+        #photos {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        #buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #yes {
+            background-color: green;
+            color: white;
+        }
+
+        #no {
+            background-color: red;
+            color: white;
+            position: absolute;
+        }
+
+        #message {
+            display: none;
+            font-size: 20px;
+            color: darkred;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="popup">
+        <h2>Will you be my Valentine? 💖</h2>
+        
+        #Your Photos
+        <div id="photos">
+            <img src="your-photo1.jpg" alt="Us Together"> 
+            <img src="your-photo2.jpg" alt="Beautiful Moment">
+        </div>
+
+        <div id="buttons">
+            <button id="yes" onclick="yesClicked()">Yes</button>
+            <button id="no" onmouseover="moveNo()">No</button>
+        </div>
+    </div>
+
+    <p id="message">Yay! I love you! ❤️😘</p>
+
+    <script>
+        function yesClicked() {
+            document.getElementById("popup").style.display = "none";
+            document.getElementById("message").style.display = "block";
+        }
+
+        function moveNo() {
+            var x = Math.random() * (window.innerWidth - 100);
+            var y = Math.random() * (window.innerHeight - 100);
+            document.getElementById("no").style.left = x + "px";
+            document.getElementById("no").style.top = y + "px";
+        }
+    </script>
+
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love ❤️</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: pink;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .screen {
+            display: none;
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .active {
+            display: flex;
+        }
+
+        #screen1 img, #screen3 img {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+
+        #screen2 {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: red;
+            font-size: 24px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #yes {
+            background-color: green;
+            color: white;
+        }
+
+        #no {
+            background-color: red;
+            color: white;
+            position: absolute;
+        }
+
+        #message {
+            position: absolute;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px black;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- First Screen (Photo 1) -->
+    <div id="screen1" class="screen active">
+        <img src="your-photo1.jpg" alt="Our First Photo">
+        <button class="btn" onclick="nextScreen()">Next</button>
+    </div>
+
+    <!-- Second Screen (Question) -->
+    <div id="screen2" class="screen">
+        <h2>Will you be my Valentine? 💖</h2>
+        <div>
+            <button id="yes" class="btn" onclick="yesClicked()">Yes</button>
+            <button id="no" class="btn" onmouseover="moveNo()">No</button>
+        </div>
+    </div>
+
+    <!-- Third Screen (Photo 2 with Message) -->
+    <div id="screen3" class="screen">
+        <img src="your-photo2.jpg" alt="Our Beautiful Moment">
+        <p id="message">I love youuu so much bachaaa ❤️</p>
+    </div>
+
+    <script>
+        function nextScreen() {
+            document.getElementById("screen1").classList.remove("active");
+            document.getElementById("screen2").classList.add("active");
+        }
+
+        function yesClicked() {
+            document.getElementById("screen2").classList.remove("active");
+            document.getElementById("screen3").classList.add("active");
+        }
+
+        function moveNo() {
+            var x = Math.random() * (window.innerWidth - 100);
+            var y = Math.random() * (window.innerHeight - 100);
+            document.getElementById("no").style.left = x + "px";
+            document.getElementById("no").style.top = y + "px";
+        }
+    </script>
+
+</body>
+</html>
